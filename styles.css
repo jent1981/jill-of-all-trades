@@ -350,9 +350,12 @@ footer { background:var(--navy-dark); color:var(--ivory); padding:5rem 0 2rem; }
   .contact-grid { grid-template-columns:1fr; }
   .form-row { grid-template-columns:1fr; }
   .footer-bottom { flex-direction:column; gap:.75rem; text-align:center; }
+  .nav-logo-img { width:36px; }
+  .page-hero { padding-top:70px; }
 }
 @media (max-width:540px) {
   .nav-container { padding:1rem 1.5rem; }
+  .nav-logo-img { width:30px; }
   .section-inner { padding:0 1.5rem; }
   .photo-strip { height:auto; }
   .values-grid { grid-template-columns:1fr; }
