@@ -350,12 +350,18 @@ footer { background:var(--navy-dark); color:var(--ivory); padding:5rem 0 2rem; }
   .contact-grid { grid-template-columns:1fr; }
   .form-row { grid-template-columns:1fr; }
   .footer-bottom { flex-direction:column; gap:.75rem; text-align:center; }
-  .nav-logo-img { width:36px; }
-  .page-hero { padding-top:70px; }
+  /* Nav: compact logo for mobile so hamburger always has room */
+  .logo-of-all, .logo-tag { display:none; }
+  .logo-jill { font-size:1.2rem; }
+  .logo-trades { font-size:1rem; }
+  .nav-logo-img { height:34px; width:auto; }
+  .hamburger { flex-shrink:0; }
+  /* Page hero: increase min-height so flex-end content clears the navbar */
+  .page-hero { min-height:500px; }
 }
 @media (max-width:540px) {
   .nav-container { padding:1rem 1.5rem; }
-  .nav-logo-img { width:30px; }
+  .nav-logo-img { height:30px; width:auto; }
   .section-inner { padding:0 1.5rem; }
   .photo-strip { height:auto; }
   .values-grid { grid-template-columns:1fr; }
