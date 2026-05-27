@@ -19,7 +19,7 @@
 }
 
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
 body { font-family: 'Inter', sans-serif; color: var(--dark); background: var(--ivory); overflow-x: hidden; line-height: 1.6; }
 
 @keyframes kenBurns { from { transform:scale(1.08); } to { transform:scale(1); } }
@@ -326,8 +326,8 @@ footer { background:var(--navy-dark); color:var(--ivory); padding:5rem 0 2rem; }
   .page-hero-bg--contact { background-position:left center !important; }
   .cta-banner .btn-ivory { background:var(--red); border-color:var(--red); color:var(--ivory); }
   .hamburger { display:flex; }
-  .nav-links { position:fixed; top:0; right:-100%; height:100vh; width:290px; background:var(--navy-dark); flex-direction:column; justify-content:center; align-items:center; gap:2rem; transition:right .42s cubic-bezier(.4,0,.2,1); z-index:10000; border-left:1px solid rgba(242,233,215,.06); }
-  .nav-links.open { right:0; }
+  .nav-links { position:fixed; top:0; right:0; height:100vh; width:290px; background:var(--navy-dark); flex-direction:column; justify-content:center; align-items:center; gap:2rem; transform:translateX(100%); transition:transform .42s cubic-bezier(.4,0,.2,1); z-index:10000; border-left:1px solid rgba(242,233,215,.06); }
+  .nav-links.open { transform:translateX(0); }
   .nav-links a { font-size:1rem; }
   .hero-inner { grid-template-columns:1fr; padding-top:80px; gap:0.5rem; }
   .hero-image { order:1; max-height:45vh; }
